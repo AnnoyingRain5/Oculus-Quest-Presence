@@ -24,9 +24,9 @@ public class Discord {
     }
 
     public static void changeGame(String details, String state) {
-        terminate()
-        presence.largeImageText = details;
-        presence.details = state;
+        terminate();
+        presence.largeImageText = state;
+        presence.details = details;
         rpc.Discord_UpdatePresence(presence);
     }
 
