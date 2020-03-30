@@ -17,15 +17,16 @@ public class Discord {
         presence = new DiscordRichPresence();
 
         presence.details = "Just started playing";
-        presence.largeImageText = "Oculus Quest";
+        presence.largeImageText = "Oculus Quest Home";
         presence.largeImageKey = "quest";
 
         rpc.Discord_UpdatePresence(presence);
     }
 
     public static void changeGame(String details, String state) {
-        presence.details = details;
-        presence.state = state;
+        terminate()
+        presence.largeImageText = details;
+        presence.details = state;
         rpc.Discord_UpdatePresence(presence);
     }
 
